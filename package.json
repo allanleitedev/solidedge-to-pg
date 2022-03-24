@@ -1,0 +1,15 @@
+{
+  "name": "solidedge-to-pg",
+  "version": "1.0.0",
+  "description": "Get BOM (Bill of materials) from Solid Edge Assembly file, and register in postgres database.",
+  "main": "main.js",
+  "author": "Allan Leite",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^17.1.2",
+    "pg": "^8.7.3"
+  }
+}
