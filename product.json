@@ -1,0 +1,257 @@
+{
+    "FileName": "G:\\GESTAO DE PROCESSOS\\REIMPLEMENTACAO DE PRODUTO\\ROX\\montagens\\815.00 - ROX MINI 5_9W TRILHO MONO.asm",
+    "Child": [
+      {
+        "Level": 1,
+        "DocumentNumber": "270.815.0011",
+        "Revision": "",
+        "Title": "CJ CORPO ROX MINI 5/9W",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\815 ROX\\DESENHOS 2021\\ITENS 2021\\270.815.0011 - CJ CORPO ROX MINI 5_9W.asm",
+        "Child": [
+          {
+            "Level": 2,
+            "DocumentNumber": "290.815.0013 ",
+            "Revision": "",
+            "Title": "CORPO ROX MINI 5/9W",
+            "Quantity": 1,
+            "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\815 ROX\\DESENHOS 2021\\ITENS 2021\\290.815.0013 - CORPO ROX MINI 5_9W.par"
+          },
+          {
+            "Level": 2,
+            "DocumentNumber": "290.815.0010",
+            "Revision": "",
+            "Title": "PARAFUSO UNIÃO ROX/LOOP",
+            "Quantity": 1,
+            "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\815 ROX\\DESENHOS 2021\\ITENS 2021\\290.815.0010 - PARAFUSO UNIÃO ROX_LOOP.par"
+          }
+        ]
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "CÓD. NA O.S",
+        "Revision": "",
+        "Title": "LED COB",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\815 ROX\\DESENHOS 2021\\ITENS 2021\\LED COB PADRÃO ROX MINI.par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "350087",
+        "Revision": "",
+        "Title": "PORCA TRAVANTE M10X1 LATÃO SEXTAVADA",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\1.BIBLIOTECA SOLID ST6\\PORCA\\MÉTRICOS\\350087 - PORCA TRAVANTE M10X1 LATÃO SEXTAVADA.par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "50.109.0074",
+        "Revision": "",
+        "Title": "DARKOO SP1215-K COB 1202 12X15MM (HOLDER MIRELA)",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\1.BIBLIOTECA SOLID ST6\\REFLETOR\\50.109.0074 - DARKOO SP1215-K COB 1202 12X15MM (HOLDER MIRELA).par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "CÓD. NA OS",
+        "Revision": "",
+        "Title": "DARKOO Ø50 (MIRELA) - PADRÃO",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\1.BIBLIOTECA SOLID ST6\\REFLETOR\\REFLETORES PADRÃO\\DARKOO Ø50 (MIRELA) - PADRÃO.par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "250.815.0090",
+        "Revision": "",
+        "Title": "TAMPA CORPO ROX MINI",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\815 ROX\\DESENHOS 2021\\ITENS 2021\\250.815.0090 - TAMPA CORPO ROX MINI.par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "430020",
+        "Revision": "",
+        "Title": "PARAFUSO ACO GALVAN PHILIPS CAB PANELA M3X10 MM",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\1.BIBLIOTECA SOLID ST6\\PARAFUSO\\MÉTRICO\\430020 - PARAFUSO ACO GALV PHILIPS CAB PANELA M3X10 MM.par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "6671",
+        "Revision": "",
+        "Title": "PARAFUSO INOX ALLEN SEM CABECA M3X8MM",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\1.BIBLIOTECA SOLID ST6\\PARAFUSO\\MÉTRICO\\6671 - PARAFUSO INOX ALLEN SEM CABECA M3X8MM .par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "CÓD NA O.S.",
+        "Revision": "",
+        "Title": "DRIVER ROX/LOOP",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\815 ROX\\DESENHOS 2021\\ITENS 2021\\DRIVER PADRÃO ROX.par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "320222",
+        "Revision": "",
+        "Title": "ARRUELA INT PROJETOR CONECTA",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\808 CONECTA\\DESENHOS\\ITENS\\MÓDULO PROJETOR\\320222 - ARRUELA INT PROJETOR CONECTA.psm"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "2323",
+        "Revision": "",
+        "Title": "ARRUELA DENTADA PRESSAO DIAM=3/8 X 10.5 DIN 6898",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\1.BIBLIOTECA SOLID ST6\\ARRUELA\\2323 - ARRUELA DENTADA PRESSAO DIAM=3_8 X 10.5 DIN 6898.par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "250.815.0081",
+        "Revision": "",
+        "Title": "TAMPA HASTE ROX MINI TRILHO MONO",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\815 ROX\\DESENHOS 2021\\ITENS 2021\\250.815.0081 - TAMPA HASTE ROX MINI TRILHO MONO.psm"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "260.815.0004",
+        "Revision": "",
+        "Title": "HASTE ROX MINI TRILHO",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\815 ROX\\DESENHOS 2021\\ITENS 2021\\260.815.0004 - HASTE ROX MINI TRILHO.par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "270.815.0010",
+        "Revision": "",
+        "Title": "CJ TAMPA INFERIOR HASTE ROX MINI",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\815 ROX\\DESENHOS 2021\\ITENS 2021\\270.815.0010 - CJ TAMPA INFERIOR HASTE ROX MINI.asm",
+        "Child": [
+          {
+            "Level": 2,
+            "DocumentNumber": "250.815.0088",
+            "Revision": "",
+            "Title": "ESTRUTURA TAMPA INFERIOR HASTE ROX MINI",
+            "Quantity": 1,
+            "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\815 ROX\\DESENHOS 2021\\ITENS 2021\\250.815.0088 - ESTRUTURA TAMPA INFERIOR HASTE ROX MINI.psm"
+          },
+          {
+            "Level": 2,
+            "DocumentNumber": "250.815.0089",
+            "Revision": "",
+            "Title": "TAMPA INFERIOR HASTE ROX MINI",
+            "Quantity": 1,
+            "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\815 ROX\\DESENHOS 2021\\ITENS 2021\\250.815.0089 - TAMPA INFERIOR HASTE ROX MINI.psm"
+          }
+        ]
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "250.815.0091",
+        "Revision": "",
+        "Title": "ESTRUTURA INT TRAVAMENTO HASTE ROX MINI",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\815 ROX\\DESENHOS 2021\\ITENS 2021\\250.815.0091 - ESTRUTURA INT TRAVAMENTO HASTE ROX MINI.psm"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "CÓD. NA OS",
+        "Revision": "",
+        "Title": "ADAPTADOR TRILHO MONO PADRÃO",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\1.BIBLIOTECA SOLID ST6\\TRILHO\\ADAPTADOR TRILHO MONO STELLA PADRÃO.par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "6481",
+        "Revision": "",
+        "Title": "PARAFUSO INOX ALLEN SEM CABECA M3X4MM",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\1.BIBLIOTECA SOLID ST6\\PARAFUSO\\MÉTRICO\\6481 - PARAFUSO INOX ALLEN SEM CABECA M3X4MM  .par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "430003",
+        "Revision": "",
+        "Title": "PARAFUSO ACO GALVAN PHILIPS CAB CHATA M3X8MM",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\1.BIBLIOTECA SOLID ST6\\PARAFUSO\\MÉTRICO\\430003 - PARAFUSO ACO GALVAN PHILIPS CAB CHATA M3X8MM.par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "430081",
+        "Revision": "",
+        "Title": "PARAFUSO ACO GALVAN PHILIPS CAB CHATA M4X12MM",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\1.BIBLIOTECA SOLID ST6\\PARAFUSO\\MÉTRICO\\430081 - PARAFUSO ACO GALVAN PHILIPS CAB CHATA M4X12MM.par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "5561",
+        "Revision": "",
+        "Title": "REBITE ROSCADO CRAVAR M4 PASSANTE AÇO GALVAN",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\1.BIBLIOTECA SOLID ST6\\REBITE\\5561 - REBITE ROSCADO M4 CRAVAR MP.0.07.019.00.par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "320187",
+        "Revision": "",
+        "Title": "ARRUELA ACABAMENTO PROJETOR CONECTA",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\808 CONECTA\\DESENHOS\\ITENS\\MÓDULO PROJETOR\\320187 - ARRUELA ACABAMENTO PROJETOR CONECTA.psm"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "2927",
+        "Revision": "",
+        "Title": "TERMINAL OLHAL PRE ISOLADO 2.5 MM M4",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\1.BIBLIOTECA SOLID ST6\\TERMINAL\\2927 - TERMINAL OLHAL PRE ISOLADO 2.5 MM M3              .par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "2417 ",
+        "Revision": "",
+        "Title": "CABO FLEX COBRE 1X1.0 MM2 SILIC VERDE =250MM",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\1.BIBLIOTECA SOLID ST6\\CABO\\2417 - CABO FLEX COBRE 1X1.0 MM2 SILIC VERDE =250MM.par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "430022",
+        "Revision": "",
+        "Title": "PORCA ACO GALV M3 MA SEXTAVADA",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\1.BIBLIOTECA SOLID ST6\\PORCA\\MÉTRICOS\\430022 - PORCA ACO GALV M3 MA SEXTAVADA.par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "50.109.0075",
+        "Revision": "",
+        "Title": "DARKOO DK-48-GB-K Ø50 (DL-TAMPA MIRELA)",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\1.BIBLIOTECA SOLID ST6\\REFLETOR\\50.109.0075 - DARKOO DK-48-GB-K Ø50 (DL-TAMPA MIRELA).par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "460.823.0001",
+        "Revision": "",
+        "Title": "MANUAL INSTALAÇÃO DUOLINE EMBUTIR",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\1.BIBLIOTECA SOLID ST6\\EMBALAGEM\\MANUAIS DE INSTALAÇÃO\\460.815.0001 - MANUAL INSTALAÇÃO ROX TRILHO.par"
+      },
+      {
+        "Level": 1,
+        "DocumentNumber": "4827",
+        "Revision": "",
+        "Title": "ETIQ. COUCHE AD. 105MM ET0110505513601 ",
+        "Quantity": 1,
+        "FileName": "\\\\192.168.7.25\\e\\DESIGN\\LIGHT DESIGN\\PROJETOS\\1.BIBLIOTECA SOLID ST6\\EMBALAGEM\\4827- ETIQ. COUCHE AD. 105 MM ET0110505513601.par"
+      }
+    ]
+  }

@@ -11,5 +11,8 @@
   "devDependencies": {
     "electron": "^17.1.2",
     "pg": "^8.7.3"
+  },
+  "dependencies": {
+    "electron-tabs": "^0.17.0"
   }
 }

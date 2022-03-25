@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/electron-tabs/electron-tabs.css">
+    <link rel="stylesheet" href="src/style/index.css">
     <title>Document</title>
 </head>
 <body>
+    <div id="logs">
+
+    </div>
     <h1>SolidEdge to Postgres Database</h1>
     <div id="getfile">
         <h2>Selecione a pasta onde se encontram os arquivos:</h2>
-        <input type="file" name="filepicker" id="filepicker" webkitdirectory multiple>
-
+        <input type="file" name="filepicker" id="filepicker" onchange="getFiles()" multiple>
+    </div>  
+    <div id="structure">
+        <ul id="asm">
+           
+        </ul>
     </div>
     
     <script src="src/script/postgres.js"></script>
+    <script src="src/script/getStructure.js"></script>
+    <script src="src/script/renderstructure.js"></script>
+    <script src="src/script/register.js"></script>
 </body>
 </html>

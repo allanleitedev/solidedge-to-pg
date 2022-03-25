@@ -1,3 +1,6 @@
+#secure data
+database.json
+
 # Logs
 logs
 *.log
