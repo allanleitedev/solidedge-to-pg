@@ -1,0 +1,112 @@
+:root {
+    --cor-bg: #f1f2f6;
+    --cor-dark: #2f3542;
+    --cor-light: #f9f9f9;
+    --cor-midle: #ced6e0;
+    --white: #fff;
+    --black: #000;
+  }
+
+.container{
+    padding: 30px;
+    background-color: var(--cor-dark);
+    margin: auto;
+    display: flex;
+    width: 50%;
+    transition: .5s;
+    margin-top: 30vh;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container:hover{
+    border-radius: 20px;
+}
+
+.container > div{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subcont{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+img{
+    margin: 20px;
+    color: var(--cor-midle);
+    opacity: 0.2;
+    display: inline;
+    height: 50px;
+    filter:invert(100%)
+}
+
+input{
+    width: 200px;
+    font-size: 16px;
+    text-align: center;
+    transform: translateY(-35px);
+    transition: 0.5s;
+}
+input:hover{
+    border-radius: 0px;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    transition: 0.3s;
+}
+
+button > img{
+    opacity: 1 ;
+}
+
+button:hover{
+    filter: invert(50%);
+    opacity: 0.3;
+    transform: rotateZ(360deg);
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    
+}
+.logo > a >img {
+    transform: scale(70%);
+    filter: invert(0%);
+    opacity: 0.3;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.logo > a > img:hover{
+    opacity: 1;
+}
+
+@media (max-width: 1170px){
+    .container{
+        width: 70%;
+    }
+}
+
+@media (max-width: 840px){
+    .container{
+        width: 100%;
+    }
+}
+
+@media (max-width: 470px){
+    .subcont > div > img{
+        display: none;
+    }
+    input{
+        margin: 20px;
+    }
+}
+

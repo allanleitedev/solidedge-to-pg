@@ -1,49 +1,115 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*RESET CSS -- -- */
+
+/* VARIABLES */
+
+:root {
+    --cor-bg: #f1f2f6;
+    --cor-dark: #2f3542;
+    --cor-light: #f9f9f9;
+    --cor-midle: #ced6e0;
+    --white: #fff;
+    --black: #000;
+  }
+/* FONTS */
+/* ROBOTO MONO */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200&display=swap');
+
+/*-----------------------*/
+
 body{
-    font-family: sans-serif;
+    background-color: var(--cor-bg);
+    font-family: 'Roboto mono thin 100', sans-serif;
+    font-weight: 100;
 }
 
-ul {
-    list-style: none;
+h1{
+    font-size: 1.5rem;
+    font-weight: thin 100;
 }
 
-div {
+h2{
+    font-size: 1.2rem;
+}
+
+nav{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 70px;
+    align-items: center;
+    background-color: var(--cor-dark);
+    color: var(--cor-bg)
+}
+
+nav > div{
+    display: flex;
+    align-items: center;
+}
+
+nav > div > span{
+    margin: 0px 10px;
+}
+
+main{
+    width: 80%;
+    margin: auto;
+    height: 90vh;
     padding: 10px;
 }
-.filhos{
-    margin-bottom: 50px;
-}
-.filhos li{
-    display: grid;
-    grid-template-columns: 0.2fr 1fr 6fr 0.5fr;
-}
 
-.red{
-    background-color: rgba(255, 107, 81, 0.5);
-    color: rgb(53, 2, 2);
-    font-weight: 700;
-}
-
-.green{
-    background-color: rgba(81, 255, 133, 0.5);
-    color: rgb(4, 51, 12);
-    font-weight: 700;
-}
-
-.yelow{
-    background-color: rgba(255, 214, 81, 0.5);
-    color: rgb(19, 19, 1);
-    font-weight: 700;
-}
-
-#logs{
-    height: 30vh;
-    width: 60vw;
-    position: absolute;
-    background-color: rgb(240, 240, 240);
-    border-radius: 20px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    visibility: hidden;
+input{
+    border: none;
+    border-radius: 7px;
+    opacity: 0.9;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+    padding: 5px;
 }

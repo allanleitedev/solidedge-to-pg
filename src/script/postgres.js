@@ -14,167 +14,124 @@ const client = new pg.Client(JSON.parse(config));
 
 client.connect()
 
-//SEARCH PRODUCT
-async function searchProduct(code){
+async function searchDesc(code){
     const query = `
-    select * from produto where produto like '${code} %'`;
-
-    
-
+    select pronome,grupo from produto where produto like '${code} %';
+`
     let result = await client.query(query)
     let response = []
-    response = result
+    console.log(code)
+    console.log(result)
+    response = result.rows[0]
     return response
 }
-// REGISTRY BASE PRODUCT FOR CONFIGURATION
-function newProduct(code,description,group,subgroup,peso){
-    
-    console.log("cadastro do produto")
+
+//SEARCH tipacab
+async function searchTipacab(code){
     const query = `
-    select * into prodtemp from produto where produto like 'COPYMODEL%';
-    update prodtemp set produto = '${code}', pronome = '${description}', grupo = '${group}', subgrupo = '${subgroup}',propeso = '${peso}';
-    insert into produto select * from prodtemp;
-    drop table prodtemp;`;
+    select prodtac1.ptltico,tipacab.tpadesc from prodtac1 inner join tipacab on (prodtac1.ptltico = tipacab.tpacodi ) where prodtac1.ptaprco like '${code} %' ORDER BY prodtac1.ptlsequ;
+`
+    let result = await client.query(query)
+    let response = []
+    response = result.rows
+    return response
+}
 
-    console.log(query)
+//SEARCH variations
+async function searchVariations(tipacabcode){
+    const query = `
+    select * from acabconf where amctipacab = '${tipacabcode}' and amcstatus <> 'I' order by amccodigo;
+`
+    let result = await client.query(query)
+    let response = []
+    response = result.rows
+    console.log(response)
+    return response
+}
 
-    var title = '';
-    var msg = '';
+async function searchException(code){
+    const query = `
+    select * from confexce where cfeprodu like '${code} %';
+`
+    let result = await client.query(query)
+    let response
+    result.length>0?response = result.rows[0].cfeexcec:response=''
+    return response
+}
 
-    client.query(query,(err,res)=>{
-        if(err){
-            title = 'Product not Registred!';
-            msg = err.stack;
-        }
-        else{
-            title = "Product Registred";
-            msg = res.Message;
+async function searchRules(codexce){
+    const query = `
+    select exaexcl,extexcl from excecoe2 where excodigo = '${codexce}';
+`
+    let result = await client.query(query)
+    let response = []
+    response = result.rows
+    return response
+}
 
-        }
-    });
+async function searchImage(code){
+    const query = `
+    select proimgrot from proimag1 where proimgcod like '${code} %';
+`
+    let result = await client.query(query)
+    let response = []
+    console.log(result.rows[0].proimgrot)
+    response = result.rows[0].proimgrot
+    return response
+}
+
+async function searchDimmensions(code){
+    const query = `
+    select prodularg,producomp,produprof from produto where produto like '${code} %';
+`
+    let result = await client.query(query)
+    let response = []
+    console.log(result.rows[0].proimgrot)
+    response[0] = result.rows[0].prodularg
+    response[1] = result.rows[0].producomp
+    response[2] = result.rows[0].produprof
+    return response
+}
+
+async function searchGpDesc(grupo){
+    const query = `
+    select grunome from grupo where grupo =${grupo};
+`
+    let result = await client.query(query)
+    let response = []
+    console.log(result.rows[0].grunome)
+    response = result.rows[0].grunome
+    return response
+}
+
+async function getVarPrice(produto,variacao,tipo){
+    const query = `
+    select avvlr from acabvall where avcod = '${variacao}' and avtab = '34' and avpro = '${produto}' and avtpa = '${tipo}';
+`
+    let result = await client.query(query)
+    let response = []
     
-    const log = {
-        "title":title,
-        "Message":msg
+    if(result.rows.length>0){
+        response = result.rows[0].avvlr
+    }else{
+        console.log(result.rows)
+        response = 0
     }
 
-    return log;
+    
+    return response
 }
 
-// REGISTRY PRODUCT STRUCTURE
-function newStructure(dad,children,amount){
-    console.log("cadastro da estrutura")
+async function getBasePrice(produto){
     const query = `
-    insert into estrutur (estproduto,estfilho,estusamed,estqtduso,fase,estarea,estpriemb,esthash,estver,estperspe,estnotif)
-    values ('${dad}','${children}','N',${amount},(select profase from produto where produto like '${children} %'),0,0,'',0,0,'N');`;
-
-    console.log(query)
-
-    //ATT PRODUCT (DAD) TO MANUFACTURED IN PRODUCT TABLE
-    const query2 = `
-    update produto set proorigem = 'F', propeso = 0.5 where produto like '${dad} %';
-    `;
-
-
-
-    const logquery = client.query(query,(err,res)=>{
-        if(err){
-            var title = 'Product not Registred!';
-            var msg = err.stack;
-            var log = {
-                "title":title,
-                "Message":msg
-            }
-
-            return log
-        }
-        else{
-            var title = "Product Registred";
-            var msg = res.Message;
-
-            var log = {
-                "title":title,
-                "Message":msg
-            }
-
-            client.query(query2)
-
-            return log
-        }
-    });
-    
-    
-    return logquery;
+    select prvenda from tabprven where produto = '${produto}' and ttpvcod = '34';
+`
+    let result = await client.query(query)
+    let response = []
+    console.log(result.rows[0].prvenda)
+    response = result.rows[0].prvenda
+    return response
 }
-
-// REGISTRY PRODUCT PROCESS
-function newProcess(code){
-    console.log("cadastro do processo")
-    const query = `
-    select * into proctemp from processo where produto like '810.0001.AOO %';
-    update proctemp set produto = '${code}', prhoras = 0.100000;
-    insert into processo select * from proctemp;
-    drop table proctemp;
-`;
-
-console.log(query)
-
-    var title = '';
-    var msg = '';
-
-    client.query(query,(err,res)=>{
-        if(err){
-            title = 'Product not Registred!';
-            msg = err.stack;
-        }
-        else{
-            title = "Product Registred";
-            msg = res.Message;
-
-        }
-    });
-    
-    const log = {
-        "title":title,
-        "Message":msg
-    }
-
-    return log;
-}
-
-// REGISTRY DRAFT FILE DIRECTORY AND NAME
-function newDraft(code,directory){
-    console.log("cadastro do draft")
-    const query = `
-    insert into desenho1 (desenho,desrevi,desaprov,descopia,desresp,desfile,desnrev,auxdesfile)
-    values ('${code}',1,'${dataAtual()}',1,'AUTO','${directory}${code}.DFT',0,'${directory}${code}.DFT');
-;
-`;
-    console.log(query)
-    var title = '';
-    var msg = '';
-
-    client.query(query,(err,res)=>{
-        if(err){
-            title = 'Product not Registred!';
-            msg = err.stack;
-        }
-        else{
-            title = "Product Registred";
-            msg = res.Message;
-
-        }
-    });
-    
-    const log = {
-        "title":title,
-        "Message":msg
-    }
-
-    return log;
-}
-
-//
 
 //FORMAT DATE (TODAY) FOR POSTGRES
 function dataAtual(){

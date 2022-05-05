@@ -1,31 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/electron-tabs/electron-tabs.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="src/style/index.css">
+    <link rel="stylesheet" href="src/style/register.css">
     <title>Document</title>
 </head>
 <body>
-    <div id="logs">
-
-    </div>
-    <h1>SolidEdge to Postgres Database</h1>
-    <div id="getfile">
-        <h2>Selecione a pasta onde se encontram os arquivos:</h2>
-        <input type="file" name="filepicker" id="filepicker" onchange="getFiles()" multiple>
-    </div>  
-    <div id="structure">
-        <ul id="asm">
-           
+    <nav>
+        <h1>Tabela de Preços</h1>
+        <div>
+            <h2>User</h2>
+            <span class="material-icons"> account_circle </span>
+        </div>
+    </nav>
+    <main>
+        <div id="modalfamilia">
+            <div id="closemodal" onclick="exibeModal('off')"><span class="material-icons-outlined">
+                highlight_off
+                </span></div>
+            <div class="fotofam">
+                <span class="material-icons-outlined">
+                    add_a_photo
+                    </span>
+                <img id="fotofam"src="" alt="">
+                <input type="file" name="imgdim" id="faminput"  accept="image/png, image/jpeg" style="display: none;" >
+            </div>
+            <div id="continfofam">
+                <div class="codigofam">
+                    <label for="codigfam">Código:</label>
+                    <input type="text" name="codigofam" id="codigofam" onkeydown="upperCaseF(this)">
+                </div>
+                <div class="nomefam">
+                    <label for="nomefam">Nome Familia:</label>
+                    <input type="text" name="nomefam" id="nomefam" onkeydown="upperCaseF(this)">
+                </div>
+                <button onclick="newFamilyFs()">Salvar</button>
+            </div>
+        </div>
+        <div class="contain">
+            <div class="cabecalho">
+                <div class="foto">
+                    <span class="material-icons-outlined">
+                        add_a_photo
+                        </span><span class="fotoDoProduto">Foto do produto</span>
+                    <img id="fotoprod"src="" alt="">
+                </div>
+                <input type="file" name="foto" id="foto"  accept="image/png, image/jpeg" style="display: none;" >
+                <div class="infosg">
+                    <ul>
+                        <li>
+                            <input type="number" maxlength="2" step="1" placeholder="IP" id="ip" name="ip">
+                        </li>
+                        <li>
+                            <div class="imgdim">
+                                <span class="material-icons-outlined">
+                                    add_a_photo
+                                    </span>
+                                <span class="fotoIsometrica">Isometrica</span>
+                                <img id="fotodim"src="" alt="">
+                            </div>
+                            <input type="file" name="imgdim" id="imgdim"  accept="image/png, image/jpeg" style="display: none;" >
+                                <li>
+                                    <input type="number" name="dimx" placeholder="DIM X (mm)" id="dimx">
+                                </li>
+                                <li>
+                                    <input type="number" name="dimy" placeholder="DIM Y (mm)" id="dimy">
+                                </li>
+                                <li>
+                                    <input type="number" name="dimz" placeholder="DIM Z (mm)" id="dimz">
+                                </li>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div id="acabamento">
+                    <h3>ACABAMENTOS:</h3>
+                    <span>Quant. Cores<input type="number" name="qtcores" id="qtcores" min="1" max="3" value="1" ><span></span></span>
+                    <ul>
+                        <li class="branco"><input type="checkbox" name="BRANCO" id="branco" class="A" checked='true'>Branco</li>
+                        <li class="preto"><input type="checkbox" name="PRETO" id="preto" class="Z" checked='true'>Preto</li>
+                        <li class="grafite"><input type="checkbox" name="GRAFITE" id="grafite" class="H" checked='true'>Grafite</li>
+                        <li class="prata"><input type="checkbox" name="PRATA" id="prata" class="I" checked='true'>Prata</li>
+                        <li class="marrom"><input type="checkbox" name="MARROM" id="marrom" class="M" checked='true'>Marrom</li>
+                        <li class="marromcort"><input type="checkbox" name="MARROM_CORTEN" id="marromcort" class="G" checked='true'>Marrom Corten</li>
+                        <li class="bronzefosc"><input type="checkbox" name="BRONZE" id="bronzefosc" class="N">Bronze Fosco</li>
+                        <li class="ourovelho"><input type="checkbox" name="OURO_VELHO" id="ourovelho" class="J">Ouro Velho</li>
+                        <li class="dourado"><input type="checkbox" name="DOURADO" id="dourado" class="L">Dourado</li>
+                        <li class="amarelo"><input type="checkbox" name="AMARELO" id="amarelo" class="B">Amarelo Gema</li>
+                        <li class="vermelho"><input type="checkbox" name="VERMELHO" id="vermelho" class="F">Vermelho</li>
+                        <li class="laranjaneon"><input type="checkbox" name="LARANJA_NEON" id="laranjaneon" class="Y">Laranja Neon</li>
+                        <li class="salmao"><input type="checkbox" name="SALMAO" id="salmao" class="S">Salmão</li>
+                        <li class="verdesalvia"><input type="checkbox" name="VERDE_SALVIA" id="verdesalvia" class="C">Verde Sálvia</li>
+                        <li class="verdesm"><input type="checkbox" name="VERDE_ESMERALDA" id="verdesm" class="Q">Verde Esmeralda</li>
+                        <li class="azul"><input type="checkbox" name="AZUL" id="azul" class="E">Azul</li>
+                        <li class="roxo"><input type="checkbox" name="ROXO" id="roxo" class="R">Roxo</li>
+                        <li class="ameixa"><input type="checkbox" name="AMEIXA" id="ameixa" class="D">Ameixa</li>
+                        <br>
+                        <li class="natural"><input type="checkbox" name="NATURAL" id="natural" class="O">Natural</li>
+                    </ul>
+                </div>
+                <div class="save">  
+                    <button id="visualizar" onclick="newProductFs()">SALVAR<span class="material-icons-outlined">save</span></button>                
+                </div>
+            </div>
+            <div class="corpo">
+                <div class="cadastro">
+                    <div class="codigo">
+                        <button id="search" onclick="getInfos()">
+                            <span class="material-icons-outlined">
+                                search
+                            </span>
+                        </button>
+                        <label for="codigo">
+                            Código:
+                        </label>
+                        
+                        <input type="text" name="codigo" id="codigo" onkeydown="upperCaseF(this)">
+                        
+                        
+                    </div>
+                    <div class="familia">
+                        <label for="codigo">Família:</label>
+                        <input type="number" name="familia" id="familia" placeholder="Cód." min="700" max="999" maxlength="3" step="1">
+                        <div class="famdesc"><p>--DESCRIÇÂO--</p></div>
+                        
+                    </div>
+                    <div class="produto">
+                        <label for="codigo">Produto:</label>
+                        <input type="text" name="produto" id="produto" onkeydown="upperCaseF(this)">
+                        <button id="adcfamilia" onclick="exibeModal('on')"><span class="material-icons-outlined">
+                            library_add
+                            </span></button>
+                    </div>
+                    <div class="ipi">
+                        <label for="ipi">IPI:</label>
+                        <input type="range" name="ipi" min="0" max="50"  value="0" id="ipi" list="tickmarks">
+                        <span id="valipi" >0%</span>   
+                        
+                    </div>
+                    <div class="custo">
+                        <label for="codigo">Custo Base:</label>
+                        <input type="text" name="custo" id="custo" class="money" placeholder='R$ 0,00'>
+                    </div>
+                    <div class="markup">
+                        <label for="codigo">Markup:</label>
+                        <input type="number" name="markup" id="markup" maxlength="2" step="0.1" placeholder="0.0">
+                    </div>
+                </div>
+                <div id="aplicacoes">
+                    <h3 class="title" >APLICAÇÕES:</h3>
+                    <span class="inout">
+                        <span><input type="radio" name="inout" id="INTERNA"><img src="src/img/lighticons/indoor.png" alt=""><p>Interno</p></span>
+                        <span><input type="radio" name="inout" id="EXTERNA"><img src="src/img/lighticons/outdoor.png" alt=""><p>Externo</p></span>
+                    </span>
+                    <span class="tipo">
+                        <span><input type="radio" name="tipo" id="DOWNLIGHT"><img src="src/img/lighticons/downlight.png" alt=""><p>Downlight</p></span>
+                        <span><input type="radio" name="tipo" id="UPLIGHT"><img src="src/img/lighticons/uplight.png" alt=""><p>Uplight</p></span>
+                        <span><input type="radio" name="tipo" id="PROJETOR"><img src="src/img/lighticons/projetor.png" alt=""><p>Projetor</p></span>
+                        <span><input type="radio" name="tipo" id="SISTEMA"><img src="src/img/lighticons/mix.png" alt=""><p>Sistema Linear</p></span>
+                        <span><input type="radio" name="tipo" id="LIGHT-EFFECT"><img src="src/img/lighticons/lighteffect.png" alt=""><p>Light Effect</p></span>
+                    </span>
+                    <span class="instal">
+                        <span><input type="radio" name="instal" id="EMBUTIR"><img src="src/img/lighticons/embutir.png" alt=""><p>Embutir</p></span>
+                        <span><input type="radio" name="instal" id="EMB-NO-FRAME"><img src="src/img/lighticons/embutirnf.png" alt=""><p>Embutir No Frame</p></span>
+                        <span><input type="radio" name="instal" id="SOBREPOR"><img src="src/img/lighticons/sobrepor.png" alt=""><p>Sobrepor</p></span>
+                        <span><input type="radio" name="instal" id="ARANDELA"><img src="src/img/lighticons/arandela.png" alt=""><p>Arandela</p></span>
+                        <span><input type="radio" name="instal" id="PENDENTE"><img src="src/img/lighticons/pendente.png" alt=""><p>Pendente</p></span>
+                        <span><input type="radio" name="instal" id="PLAFON"><img src="src/img/lighticons/plafon.png" alt=""><p>Plafon</p></span>
+                        <span><input type="radio" name="instal" id="MODULO"><img src="src/img/lighticons/modulo.png" alt=""><p>Módulo</p></span>
+                    </span>
+                    <span class="luz">
+                        <span><input type="radio" name="luz" id="DIFUSA"><img src="src/img/lighticons/downlight.png" alt=""><p>Difusa</p></span>
+                        <span><input type="radio" name="luz" id="DESTAQUE"><img src="src/img/lighticons/destaque.png" alt=""><p>Destaque</p></span>
+                        <span><input type="radio" name="luz" id="MIX"><img src="src/img/lighticons/mix.png" alt=""><p>Mix</p></span>
+                        <span><input type="radio" name="luz" id="INDIRETA"><img src="src/img/lighticons/indireta.png" alt=""><p>Indireta</p></span>
+                        <span><input type="radio" name="luz" id="DIRETA-INDIRETA"><img src="src/img/lighticons/diretaindireta.png" alt=""><p>Dir/Ind</p></span>
+                        <span><input type="radio" name="luz" id="ASSIMETRICA"><img src="src/img/lighticons/assimetrica.png" alt=""><p>Assimétrica</p></span>
+                        <span><input type="radio" name="luz" id="CEGA"><img src="src/img/lighticons/cega.png" alt=""><p>Cega</p></span>
+                    </span>
+                </div>
+                <h3 class="title">VARIAÇÕES:</h3>
+                <div class="listvar">
+                    <table id="acab">
+                        <tbody >
+                        </tbody>
+                    </table>
+                    <button class="addvar" onclick="adicionaVariacao()" ><span class="material-icons-outlined" >library_add</span><span>ADD Variação</span></button>
+                </div>
+        </div>
+        <ul class="preview">
+            <li class="prevcontrol"> <button id="salvar" onclick="cadastraPreco()" >Confirma</button> <button onclick="cancela()">Cancela</button> </li>
         </ul>
-    </div>
-    
-    <script src="src/script/postgres.js"></script>
-    <script src="src/script/getStructure.js"></script>
-    <script src="src/script/renderstructure.js"></script>
-    <script src="src/script/register.js"></script>
+        
+    </main>
+    <script src="./src/script/register.js" type="text/javascript" language="javascript"></script>
+    <script type="text/javascript" language="javascript" src="./src/script/jquery.js"></script>
+    <script src="./src/script/postgres.js"></script>
+    <script src="./src/script/searchinfo.js"></script>
+    <script src="./src/script/imgbb.js"></script>
+    <script src="./firebase.js"></script>
+    <script src="./src/script/newproduct.js"></script>
+    <script type="text/javascript">
+        //formata valor monetario
+        /*$(document).on("focus",".money", function(){
+            $(this).maskMoney({
+                prefix: "R$ ",
+                decimal: ".",
+                thousands:","
+            })
+        })*/
+    </script>
+    <script>
+
+        let range = document.querySelector('#ipi')
+        let value = document.querySelector('#valipi')
+
+        range.addEventListener('input', function() {
+        value.innerHTML = `${this.value}%`;
+        });
+    </script>
 </body>
 </html>
